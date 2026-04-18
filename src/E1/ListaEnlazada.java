@@ -1,4 +1,4 @@
-﻿package E1;
+package E1;
 
 public class ListaEnlazada {
 
@@ -48,7 +48,7 @@ public class ListaEnlazada {
         actual.next = nuevoNodo;
     }
 
-    public void Imprimir(){
+    public void imprimir(){
         Nodo actual = cabeza;
         System.out.println("Estado de la memoria: ");
 
