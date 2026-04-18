@@ -12,6 +12,7 @@ public class ListaEnlazada {
         }
     }
 
+
     // Puntero maestro: nos dice donde empieza la lista
     private Nodo cabeza;
 
