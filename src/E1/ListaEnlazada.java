@@ -23,7 +23,28 @@ public class ListaEnlazada {
 
     public void insertarAlInicio(int data){
         Nodo nuevoNodo = new Nodo(data);
-        nuevoNodo.next = cabeza;
-        cabeza = nuevoNodo;
+        nuevoNodo.next = cabeza; // El Nuevo Nodo mira a la antigua cabeza
+        cabeza = nuevoNodo; // La Cabeza de la lista se actualiza
+    }
+
+    public void insertarAlFinal(int data){
+        Nodo nuevoNodo = new Nodo(data);
+
+        // si la lista esta vacia, el nuevo nodo es la cabeza
+        if(cabeza == null){
+            cabeza = nuevoNodo;
+            return;
+        }
+
+        // si no esta vacio, creamos un puntero temporal para recorrerla
+        Nodo actual = cabeza;
+
+        // Mientras el nodo actual tenga un nodo siguiente, avanzamos
+        while(actual.next != null){
+            actual = actual.next;
+        }
+
+        // Al salir del bucle, actual es el ultimo nodo, lo enlazamos al nuevo.
+        actual.next = nuevoNodo;
     }
 }
