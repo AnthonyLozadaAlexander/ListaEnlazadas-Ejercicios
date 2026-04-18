@@ -11,8 +11,8 @@ class Nodo {
     }
 
     public void imprimir(){
-        Nodo actual = this; 
-        StringBuilder salida = new StringBuilder();
+        Nodo actual = this; // apunta al nodo Actual
+        StringBuilder salida = new StringBuilder(); // Objeto para concatenar cadenas de texto como los nodos y punteros
 
         // mientras tenga un nodo siguiente
         while(actual != null){
@@ -20,7 +20,7 @@ class Nodo {
             actual = actual.next; // avanzamos al siguiente Nodo
         }
 
-        salida.append("null");
+        salida.append("null"); // se ha llegado al ultimo elemento y el puntero apunta a Null
         System.out.println(salida.toString());
     }
 }
