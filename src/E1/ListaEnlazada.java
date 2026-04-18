@@ -47,4 +47,16 @@ public class ListaEnlazada {
         // Al salir del bucle, actual es el ultimo nodo, lo enlazamos al nuevo.
         actual.next = nuevoNodo;
     }
+
+    public void Imprimir(){
+        Nodo actual = cabeza;
+        System.out.println("Estado de la memoria: ");
+
+        while(actual != null){
+            System.out.println(actual.data + " -> ");
+            actual = actual.next;
+        }
+
+        System.out.println("null");
+    }
 }
